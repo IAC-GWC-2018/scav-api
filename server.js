@@ -7,7 +7,7 @@ require('dotenv').config();
 const port           = process.env.PORT;
 
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 MongoClient.connect(dbInfo.url, (err, database) => {
   if (err) return console.log(err)
